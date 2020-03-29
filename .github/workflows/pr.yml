@@ -13,10 +13,14 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: master
-          clean: true
+      - uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Build
         run: npm run build
+
+      - name: Semantic version
+        if: contains(github.event.commits[0].message, '[skip ci]') == false
+        run: npm run release -- --dry-run

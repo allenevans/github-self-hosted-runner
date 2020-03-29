@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Self-hosted github action runner",
   "author": "Allen Evans <allen@techinity.com>",
+  "private": true,
   "homepage": "https://github.com/allenevans/github-self-hosted-runner",
   "bugs": {
     "url": "https://github.com/allenevans/github-self-hosted-runner/issues"
@@ -16,8 +17,17 @@
   "scripts": {
     "build": "docker build -f github-self-hosted-runner.dockerfile --tag github-self-hosted-runner .",
     "logs": "docker-compose logs --follow",
+    "release": "semantic-release",
     "prestart": "npm run build",
     "start": "echo Starting runner \"${RUNNER_NAME:-${HOSTNAME:-local-runner}}...\"; docker-compose up -d",
     "stop": "docker-compose down"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "3.0.6",
+    "@semantic-release/commit-analyzer": "6.3.3",
+    "@semantic-release/git": "7.0.18",
+    "@semantic-release/npm": "5.3.5",
+    "@semantic-release/release-notes-generator": "7.3.5",
+    "semantic-release": "15.14.0"
   }
 }
