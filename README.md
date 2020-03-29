@@ -44,7 +44,7 @@ Go to https://github.com/<YOUR organisation/repository>/settings/actions to veri
 > Build\
 > Build the docker file locally
 > ```shell script
-> npm build
+> npm run build
 > ```
 
 > Start\
