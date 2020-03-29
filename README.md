@@ -64,3 +64,24 @@ Go to https://github.com/<YOUR organisation/repository>/settings/actions to veri
 > ```shell script
 > npm run stop
 > ```
+
+
+## Notes
+
+When using locally hosted github runners, it may be necessary to manually purge the workspace. For example, adding
+the following steps into your build pipeline can help to ensure the workspace is clean.
+
+These steps should not be used on github hosted runners since the workspace on these runners will always be clean.
+
+```
+  steps:
+    # Clear workspace directory. Only do this on self-hosted runners.
+    - name: Clean workspace
+      run: rm -rf $RUNNER_WORK_DIRECTORY/* || true
+
+    # clear any left over tags from previous builds then get branches and tags
+    - name: Clean checkout
+      run: |
+      for tag in `git tag -l`; do git tag -d $tag; done
+      git fetch && git fetch -t && git checkout ${{github.head_ref}}
+```
