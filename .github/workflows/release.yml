@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-  validation:
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,4 +30,6 @@ jobs:
 
       - name: "Semantic version"
         if: contains(github.event.commits[0].message, '[skip ci]') == false
+        env:
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
         run: npm run release
