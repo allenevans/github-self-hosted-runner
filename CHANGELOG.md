@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.1.0...v1.2.0) (2020-03-29)
+
+
+### Features
+
+* docker tag latest ([3648c07](https://github.com/allenevans/github-self-hosted-runner/commit/3648c07fe0b71da0dead8defda7b37f42d13bbab))
+
 # [1.1.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.0.0...v1.1.0) (2020-03-29)
 
 
