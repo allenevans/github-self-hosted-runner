@@ -14,13 +14,13 @@ Disadvantages:-
 
 ## Getting started
 
-The fastest way to launch the self-hosted runner is by using `docker-compose`.
+The fastest way to launch the self-hosted runner is by using docker image from docker hub.
 
 ```shell script
 export GITHUB_TOKEN=<YOUR GITHUB TOKEN HERE>; 
 export REPOSITORY=<YOUR organisation/repository>;
 
-docker-compose up
+docker run -it --rm -e GITHUB_TOKEN=${GITHUB_TOKEN} -e REPOSITORY=${REPOSITORY} allenevans/github-self-hosted-runner:latest
 ```
 
 Alternatively check out the `npm` convenience scripts. 
