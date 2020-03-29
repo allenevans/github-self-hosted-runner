@@ -40,5 +40,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           docker tag github-self-hosted-runner allenevans/github-self-hosted-runner:$(jq -r ".version" package.json)
+          docker tag github-self-hosted-runner allenevans/github-self-hosted-runner:latest
           echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
           docker push allenevans/github-self-hosted-runner:$(jq -r ".version" package.json)
+          docker push allenevans/github-self-hosted-runner:latest

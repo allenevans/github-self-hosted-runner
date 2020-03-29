@@ -1,7 +1,7 @@
 version: '3'
 services:
   github-runner:
-    image: github-self-hosted-runner
+    image: allenevans/github-self-hosted-runner:latest
     environment:
       # Name to assign to the runner
       RUNNER_NAME: local-runner

@@ -41,7 +41,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         zip; \
         pip install awscli --upgrade
 
-COPY src/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY ./src /
 RUN chmod 644 /etc/supervisor/conf.d/supervisord.conf
 
 # Install Docker CLI
