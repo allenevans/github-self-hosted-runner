@@ -1,4 +1,4 @@
-# Github Runner
+# Github Self-hosted Actions Runner
 
 Dockerized Github self-hosted runner that allows github actions pipelines to be run in a local, self-managed docker container.
 
