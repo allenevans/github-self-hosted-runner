@@ -1,0 +1,23 @@
+{
+  "name": "github-self-hosted-runner",
+  "version": "1.0.0",
+  "description": "Self-hosted github action runner",
+  "author": "Allen Evans <allen@techinity.com>",
+  "homepage": "https://github.com/allenevans/github-self-hosted-runner",
+  "bugs": {
+    "url": "https://github.com/allenevans/github-self-hosted-runner/issues"
+  },
+  "license": "MIT",
+  "main": "github-self-hosted-runner.dockerfile",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allenevans/github-self-hosted-runner.git"
+  },
+  "scripts": {
+    "build": "docker build -f github-self-hosted-runner.dockerfile --tag github-self-hosted-runner .",
+    "logs": "docker-compose logs --follow",
+    "prestart": "npm run build",
+    "start": "echo Starting runner \"${RUNNER_NAME:-${HOSTNAME:-local-runner}}...\"; docker-compose up -d",
+    "stop": "docker-compose down"
+  }
+}

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  github-runner:
+    image: github-self-hosted-runner
+    environment:
+      # Name to assign to the runner
+      RUNNER_NAME: local-runner
+
+      # Github repository identifier in the format {{org}}/{{project}} e.g. allenevans/github-self-hosted-runner
+      REPOSITORY: "${REPOSITORY}"
+
+      # Github api token
+      GITHUB_TOKEN: "${GITHUB_TOKEN}"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
