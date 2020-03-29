@@ -15,21 +15,30 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: "Config"
+      - name: Config
         run: |
           echo "Release triggered by ${{github.actor}}"
           echo "Commit ${{github.event.commits[0].message}}"
           git config --global user.email "git-ci@techinity.com"
           git config --global user.name "gitci"
 
-      - name: "Install dependencies"
+      - name: Install dependencies
         run: npm install
 
-      - name: "Build"
+      - name: Build
         run: npm run build
 
-      - name: "Semantic version"
+      - name: Semantic version
         if: contains(github.event.commits[0].message, '[skip ci]') == false
         env:
           GH_TOKEN: ${{secrets.GH_TOKEN}}
         run: npm run release
+
+      - name: Docker publish
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          docker tag github-self-hosted-runner allenevans/github-self-hosted-runner:$(jq -r ".version" package.json)
+          echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+          docker push allenevans/github-self-hosted-runner:$(jq -r ".version" package.json)
