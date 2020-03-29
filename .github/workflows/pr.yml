@@ -1,0 +1,22 @@
+name: pr
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+          clean: true
+
+      - name: Build
+        run: npm run build
