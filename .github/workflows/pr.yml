@@ -27,7 +27,7 @@ jobs:
 
       - name: Check Image Exists
         id: image
-        run: docker pull allenevans/github-self-hosted-runner:$(jq -r '.version' package.json) && echo "::set-output name=exists::true" || echo "Image can be published"
+        run: docker pull allenevans/github-self-hosted-runner:0.0.0 && echo "::set-output name=exists::true" || echo "Image can be published"
 
       - name: Image Exists
         if: steps.image.outputs.exists == 'true'
