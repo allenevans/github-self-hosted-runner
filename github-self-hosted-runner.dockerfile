@@ -41,9 +41,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         zip; \
         pip install awscli --upgrade
 
-COPY ./src /
-RUN chmod 644 /etc/supervisor/conf.d/supervisord.conf
-
 # Install Docker CLI
 RUN curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && rm get-docker.sh
 
@@ -71,9 +68,8 @@ RUN useradd -ms /bin/bash runner && \
     usermod -aG sudo runner && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-WORKDIR /home/runner
-
 # Install the github runner
+WORKDIR /home/runner
 RUN curl -L -O https://github.com/actions/runner/releases/download/v${GITHUB_RUNNER_VERSION}/actions-runner-linux-x64-${GITHUB_RUNNER_VERSION}.tar.gz \
     && tar -zxf actions-runner-linux-x64-${GITHUB_RUNNER_VERSION}.tar.gz \
     && rm -f actions-runner-linux-x64-${GITHUB_RUNNER_VERSION}.tar.gz \
@@ -81,6 +77,7 @@ RUN curl -L -O https://github.com/actions/runner/releases/download/v${GITHUB_RUN
     && chown -R runner: /home/runner
 
 COPY ./src /
+RUN chmod 644 /etc/supervisor/conf.d/supervisord.conf
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

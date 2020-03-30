@@ -1,11 +1,11 @@
 # Github Self-hosted Actions Runner
 
-Dockerized Github self-hosted runner that allows github actions pipelines to be run in a local, self-managed docker container.
+Dockerized github self-hosted runner that allows github actions pipelines to be run in a local, self-managed docker container.
 
 Advantages:-
 * Control the build environment dependencies, for example use a specific version of terraform
 * Does not consume github build minutes
-* Good for longer running processes
+* Good for long running processes
 
 Disadvantages:-
 * Workspaces may not cleaned between runs, this can cause old artifacts to interfere with builds
@@ -20,10 +20,10 @@ The fastest way to launch the self-hosted runner is by using docker image from d
 export GITHUB_TOKEN=<YOUR GITHUB TOKEN HERE>; 
 export REPOSITORY=<YOUR organisation/repository>;
 
-docker run -it --rm -e GITHUB_TOKEN=${GITHUB_TOKEN} -e REPOSITORY=${REPOSITORY} allenevans/github-self-hosted-runner:latest
+docker run -it --rm -e GITHUB_TOKEN=${GITHUB_TOKEN} -e REPOSITORY=${REPOSITORY} -e RUNNER_NAME=local-runner allenevans/github-self-hosted-runner:latest
 ```
 
-Alternatively check out the `npm` convenience scripts. 
+Alternatively check out the [npm](#npm-scripts) convenience scripts. 
 
 Go to https://github.com/<YOUR organisation/repository>/settings/actions to verify self-hosted runner registration.
 
