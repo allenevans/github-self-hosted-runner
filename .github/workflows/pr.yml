@@ -24,3 +24,15 @@ jobs:
       - name: Semantic version
         if: contains(github.event.commits[0].message, '[skip ci]') == false
         run: npm run release -- --dry-run
+
+      - name: Check Image Exists
+        id: image
+        run: docker pull allenevans/github-self-hosted-runner:$(jq -r '.version' package.json) && echo "::set-output name=exists::true" || echo "Image can be published"
+
+      - name: Image Exists
+        if: steps.image.outputs.exists == 'true'
+        run: echo Image exists
+
+      - name: Image Not Exists
+        if: steps.image.outputs.exists != 'true'
+        run: echo Image does not exist
