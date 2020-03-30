@@ -35,6 +35,7 @@ jobs:
         run: npm run release
 
       - name: Docker publish
+        if: contains(github.event.commits[0].message, '[skip ci]') == false
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
