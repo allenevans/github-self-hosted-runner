@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.2.0...v1.3.0) (2020-03-30)
+
+
+### Features
+
+* general improvements ([9e161ce](https://github.com/allenevans/github-self-hosted-runner/commit/9e161cec1a1a38f0741be6e5c17f48ea92a576c1))
+
 # [1.2.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.1.0...v1.2.0) (2020-03-29)
 
 
