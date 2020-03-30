@@ -28,17 +28,16 @@ Alternatively check out the `npm` convenience scripts.
 Go to https://github.com/<YOUR organisation/repository>/settings/actions to verify self-hosted runner registration.
 
 ## Environment variables
-| Variable                | Description                                                                                                                                                                                                          | Required | Default                  |
-|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|--------------------------|
-| GITHUB_API              | Github api base url.                                                                                                                                                                                                 | N        | `https://api.github.com` |
-| GITHUB_TOKEN            | Github API token.<br>[Creating a personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)                                            | Y        |                          |
-| GITHUB_URL              | Github base url.                                                                                                                                                                                                     | N        | `https://github.com`     |
-| REPOSITORY              | Owner / repository name. For example `allenevans/github-self-hosted-runner`.                                                                                                                                         | Y        |                          |
-| RUNNER_NAME             | Name of the self-hosted github action runner.                                                                                                                                                                        | N        | `local-runner`           |
-| RUNNER_REPLACE_EXISTING | Automatically replace an existing runner with the same name. `true` or `false`                                                                                                                                       | N        | `true`                   |
-| RUNNER_TOKEN            | Runner registration token. Leave blank to request a new registration token when starting.<br>[Create a registration token](https://developer.github.com/v3/actions/self_hosted_runners/#create-a-registration-token) | N        |                          |
-| RUNNER_WORK_DIRECTORY   | Working directory used inside the self-hosted runner for checking out code.                                                                                                                                          | N        | `_work`                  |
-|                         |                                                                                                                                                                                                                      |          |                          |
+| Variable                | Description                                                                                                                                                                                                          | Required | Default                       |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|-------------------------------|
+| GITHUB_API              | Github api base url.                                                                                                                                                                                                 | N        | `https://api.github.com`      |
+| GITHUB_TOKEN            | Github API token.<br>[Creating a personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)                                            | Y        |                               |
+| GITHUB_URL              | Github base url.                                                                                                                                                                                                     | N        | `https://github.com`          |
+| REPOSITORY              | Owner / repository name. For example `allenevans/github-self-hosted-runner`.                                                                                                                                         | Y        |                               |
+| RUNNER_NAME             | Name of the self-hosted github action runner. Using a fixed name prevents multiple self-hosted runner registrations.                                                                                                 | N        | ${HOSTNAME} or `local-runner` |
+| RUNNER_REPLACE_EXISTING | Automatically replace an existing runner with the same name. `true` or `false`                                                                                                                                       | N        | `true`                        |
+| RUNNER_TOKEN            | Runner registration token. Leave blank to request a new registration token when starting.<br>[Create a registration token](https://developer.github.com/v3/actions/self_hosted_runners/#create-a-registration-token) | N        |                               |
+| RUNNER_WORK_DIRECTORY   | Working directory used inside the self-hosted runner for checking out code.                                                                                                                                          | N        | `_work`                       |
 
 ## NPM Scripts
 > Build\
@@ -74,6 +73,10 @@ the following steps into your build pipeline can help to ensure the workspace is
 These steps should not be used on github hosted runners since the workspace on these runners will always be clean.
 
 ```
+jobs:
+  build:
+    runs-on: self-hosted
+
   steps:
     # Clear workspace directory. Only do this on self-hosted runners.
     - name: Clean workspace
