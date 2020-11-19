@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.3.0...v1.4.0) (2020-11-19)
+
+
+### Features
+
+* update dependencies ([ae1d7a1](https://github.com/allenevans/github-self-hosted-runner/commit/ae1d7a193970babbc531361f41f3f70da41d81c1))
+
 # [1.3.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.2.0...v1.3.0) (2020-03-30)
 
 
