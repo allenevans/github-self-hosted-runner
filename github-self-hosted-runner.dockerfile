@@ -1,16 +1,16 @@
 FROM debian:buster
 
 # https://github.com/docker/compose/releases
-ARG DOCKER_COMPOSE_VERSION=1.25.4
+ARG DOCKER_COMPOSE_VERSION=1.27.4
 
 # https://github.com/actions/runner/releases
-ARG GITHUB_RUNNER_VERSION=2.165.2
+ARG GITHUB_RUNNER_VERSION=2.274.2
 
 # https://github.com/docker/machine/releases
 ARG DOCKER_MACHINE_VERSION=0.16.2
 
 # https://www.terraform.io/downloads.html
-ARG TERRAFORM_VERSION=0.12.24
+ARG TERRAFORM_VERSION=0.13.5
 
 ENV GITHUB_URL=""
 ENV RUNNER_NAME=""
