@@ -16,6 +16,7 @@
   },
   "scripts": {
     "build": "docker build -f github-self-hosted-runner.dockerfile --tag github-self-hosted-runner .",
+    "debug": "npm run build && docker run -it --rm  -v /var/run/docker.sock:/var/run/docker.sock -e GITHUB_TOKEN=${GITHUB_TOKEN} -e REPOSITORY=${REPOSITORY} -e RUNNER_NAME=local-runner github-self-hosted-runner",
     "logs": "docker-compose logs --follow",
     "release": "semantic-release",
     "prestart": "npm run build",
