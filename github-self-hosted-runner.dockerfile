@@ -4,13 +4,13 @@ FROM debian:buster
 ARG DOCKER_COMPOSE_VERSION=1.27.4
 
 # https://github.com/actions/runner/releases
-ARG GITHUB_RUNNER_VERSION=2.274.2
+ARG GITHUB_RUNNER_VERSION=2.275.1
 
 # https://github.com/docker/machine/releases
 ARG DOCKER_MACHINE_VERSION=0.16.2
 
 # https://www.terraform.io/downloads.html
-ARG TERRAFORM_VERSION=0.13.5
+ARG TERRAFORM_VERSION=0.14.2
 
 ENV GITHUB_URL=""
 ENV RUNNER_NAME=""
@@ -22,6 +22,7 @@ ENV REPOSITORY=""
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -y \
         apt-transport-https \
+        autoconf \
         build-essential \
         bzip2 \
         ca-certificates \
@@ -29,6 +30,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         curl \
         git \
         jq \
+        libglu1-mesa \
+        libxrender1 \
+        libxtst6 \
+        libxi6 \
         python \
         python-pip \
         python3 \
