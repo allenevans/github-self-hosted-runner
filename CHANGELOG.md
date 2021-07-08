@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.8.0...v1.9.0) (2021-07-08)
+
+
+### Features
+
+* update terraform to v1 ([60b4f66](https://github.com/allenevans/github-self-hosted-runner/commit/60b4f669f44c0d826702b0aa46f5940d7154c28a))
+
 # [1.8.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.7.0...v1.8.0) (2021-06-01)
 
 
