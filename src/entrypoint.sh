@@ -45,17 +45,13 @@ if [[ -z $RUNNER_WORK_DIRECTORY ]]; then
 fi
 echo "RUNNER_WORK_DIRECTORY=${RUNNER_WORK_DIRECTORY}"
 
-echo "RUNNER_REPLACE_EXISTING=${RUNNER_REPLACE_EXISTING:-true}"
-CONFIG_INPUT="\n\n\n"
-if [ "$(echo "${RUNNER_REPLACE_EXISTING:-true}" | tr '[:upper:]' '[:lower:]')" == "true" ]; then
-  CONFIG_INPUT="Y\n\n"
-fi
-
 echo "RUNNER_NAME=${RUNNER_NAME:-${HOSTNAME:-local-runner}}"
 if [[ -f ".runner" ]]; then
   echo "Runner already configured. Skipping config."
 else
-  echo -ne $CONFIG_INPUT | ./config.sh \
+  ./config.sh \
+    --unattended \
+    --replace \
     --url "${GITHUB_URL:-https://github.com}/$REPOSITORY" \
     --token "$RUNNER_TOKEN" \
     --name "${RUNNER_NAME:-${HOSTNAME:-local-runner}}" \
