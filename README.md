@@ -8,7 +8,7 @@ Advantages:-
 * Good for long running processes
 
 Disadvantages:-
-* Workspaces may not cleaned between runs, this can cause old artifacts to interfere with builds
+* Workspaces may not be cleaned between runs, this can cause old artifacts to interfere with builds
 * Configuring the token currently has to be done via the UI. See [API to generate runners token](https://github.community/t5/GitHub-Actions/API-to-generate-runners-token/m-p/39911/highlight/true#M4012)
 * Generated API token is not always correct, if runner is unable to connect, stop the runner, generate a new key and try again.
 
