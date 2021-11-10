@@ -1,6 +1,6 @@
 {
   "name": "github-self-hosted-runner",
-  "version": "1.10.0",
+  "version": "2.0.0",
   "description": "Self-hosted github action runner",
   "author": "Allen Evans <allen@techinity.com>",
   "private": true,

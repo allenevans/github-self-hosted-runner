@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.10.0...v2.0.0) (2021-11-10)
+
+
+### Features
+
+* default replacing runner name ([20d652b](https://github.com/allenevans/github-self-hosted-runner/commit/20d652b10fb292eb000a0ef372f6b6518d4fe11a))
+* update dependencies ([223a216](https://github.com/allenevans/github-self-hosted-runner/commit/223a216625358f5d8078ab042b7f5c4a12582878))
+
+
+### BREAKING CHANGES
+
+* * removed RUNNER_REPLACE_EXISTING environment parameter
+
 # [1.10.0](https://github.com/allenevans/github-self-hosted-runner/compare/v1.9.0...v1.10.0) (2021-09-02)
 
 
