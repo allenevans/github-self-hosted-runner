@@ -8,7 +8,7 @@ Advantages:-
 * Good for long running processes
 
 Disadvantages:-
-* Workspaces may not cleaned between runs, this can cause old artifacts to interfere with builds
+* Workspaces may not be cleaned between runs, this can cause old artifacts to interfere with builds
 * Configuring the token currently has to be done via the UI. See [API to generate runners token](https://github.community/t5/GitHub-Actions/API-to-generate-runners-token/m-p/39911/highlight/true#M4012)
 * Generated API token is not always correct, if runner is unable to connect, stop the runner, generate a new key and try again.
 
@@ -35,7 +35,6 @@ Go to https://github.com/<YOUR organisation/repository>/settings/actions to veri
 | GITHUB_URL              | Github base url.                                                                                                                                                                                                     | N        | `https://github.com`          |
 | REPOSITORY              | Owner / repository name. For example `allenevans/github-self-hosted-runner`.                                                                                                                                         | Y        |                               |
 | RUNNER_NAME             | Name of the self-hosted github action runner. Using a fixed name prevents multiple self-hosted runner registrations.                                                                                                 | N        | ${HOSTNAME} or `local-runner` |
-| RUNNER_REPLACE_EXISTING | Automatically replace an existing runner with the same name. `true` or `false`                                                                                                                                       | N        | `true`                        |
 | RUNNER_TOKEN            | Runner registration token. Leave blank to request a new registration token when starting.<br>[Create a registration token](https://developer.github.com/v3/actions/self_hosted_runners/#create-a-registration-token) | N        |                               |
 | RUNNER_WORK_DIRECTORY   | Working directory used inside the self-hosted runner for checking out code.                                                                                                                                          | N        | `_work`                       |
 
