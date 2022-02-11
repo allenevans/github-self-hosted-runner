@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 # https://github.com/docker/compose/releases
 ARG DOCKER_COMPOSE_VERSION=2.2.3
@@ -31,11 +31,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         git \
         jq \
         libglu1-mesa \
+        libicu-dev \
         libxrender1 \
         libxtst6 \
         libxi6 \
         python \
-        python-pip \
         python3 \
         python3-setuptools \
         python3-pip \
