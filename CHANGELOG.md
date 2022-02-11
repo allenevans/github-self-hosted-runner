@@ -1,3 +1,11 @@
+# [2.2.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.1.0...v2.2.0) (2022-02-11)
+
+
+### Features
+
+* grant all users read/write on docker.sock ([77059ac](https://github.com/allenevans/github-self-hosted-runner/commit/77059ac1c7ec7e968bbbd09dc0726f3643157024))
+* upgrade base image to debian bullseye ([200d14c](https://github.com/allenevans/github-self-hosted-runner/commit/200d14c8d9e79170c2302eb78c1f16b404e067d2))
+
 # [2.1.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.0.0...v2.1.0) (2022-02-11)
 
 
