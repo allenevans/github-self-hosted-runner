@@ -28,17 +28,18 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         ca-certificates \
         curl \
         curl \
+        default-mysql-client \
         git \
         jq \
         libglu1-mesa \
         libicu-dev \
+        libxi6 \
         libxrender1 \
         libxtst6 \
-        libxi6 \
         python \
         python3 \
-        python3-setuptools \
         python3-pip \
+        python3-setuptools \
         software-properties-common \
         sudo \
         supervisor \

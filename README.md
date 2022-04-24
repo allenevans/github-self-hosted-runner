@@ -5,7 +5,7 @@ Dockerized github self-hosted runner that allows github actions pipelines to be 
 Advantages:-
 * Control the build environment dependencies, for example use a specific version of terraform
 * Does not consume github build minutes
-* Good for long running processes
+* Good for long-running processes
 
 Disadvantages:-
 * Workspaces may not be cleaned between runs, this can cause old artifacts to interfere with builds
