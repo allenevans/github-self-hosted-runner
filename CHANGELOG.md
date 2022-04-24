@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.2.2...v2.3.0) (2022-04-24)
+
+
+### Features
+
+* add mysql client to image ([b09f016](https://github.com/allenevans/github-self-hosted-runner/commit/b09f016162159c056252263cc8c6c5747abbef2f))
+
 ## [2.2.2](https://github.com/allenevans/github-self-hosted-runner/compare/v2.2.1...v2.2.2) (2022-04-24)
 
 
