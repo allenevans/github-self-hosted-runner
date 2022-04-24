@@ -1,16 +1,16 @@
 FROM debian:bullseye
 
 # https://github.com/docker/compose/releases
-ARG DOCKER_COMPOSE_VERSION=2.2.3
+ARG DOCKER_COMPOSE_VERSION=2.4.1
 
 # https://github.com/actions/runner/releases
-ARG GITHUB_RUNNER_VERSION=2.287.1
+ARG GITHUB_RUNNER_VERSION=2.290.1
 
 # https://github.com/docker/machine/releases
 ARG DOCKER_MACHINE_VERSION=0.16.2
 
 # https://www.terraform.io/downloads.html
-ARG TERRAFORM_VERSION=1.1.5
+ARG TERRAFORM_VERSION=1.1.9
 
 ENV GITHUB_URL=""
 ENV RUNNER_NAME=""
@@ -50,7 +50,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 RUN curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && rm get-docker.sh
 
 # Install Docker-Compose
-RUN curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
+RUN curl -L "https://github.com/docker/compose/releases/download/v${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose
 
 # Install docker machine
