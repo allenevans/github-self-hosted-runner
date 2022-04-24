@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/allenevans/github-self-hosted-runner/compare/v2.2.1...v2.2.2) (2022-04-24)
+
+
+### Bug Fixes
+
+* use sudo to apply permissions ([c7e5f72](https://github.com/allenevans/github-self-hosted-runner/commit/c7e5f72d4e5c943f60e2df3ec45c768dd8d97ec2))
+
 ## [2.2.1](https://github.com/allenevans/github-self-hosted-runner/compare/v2.2.0...v2.2.1) (2022-04-24)
 
 
