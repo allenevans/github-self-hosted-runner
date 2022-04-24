@@ -47,7 +47,7 @@ echo "RUNNER_WORK_DIRECTORY=${RUNNER_WORK_DIRECTORY}"
 
 echo "RUNNER_NAME=${RUNNER_NAME:-${HOSTNAME:-local-runner}}"
 
-chmod 666 /var/run/docker.sock || true
+sudo chmod 666 /var/run/docker.sock || true
 
 if [[ -f ".runner" ]]; then
   echo "Runner already configured. Skipping config."
