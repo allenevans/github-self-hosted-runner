@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/allenevans/github-self-hosted-runner/compare/v2.2.0...v2.2.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* update path to download docker-compose as the 'v' prefix has been added ([e0f66f3](https://github.com/allenevans/github-self-hosted-runner/commit/e0f66f3b55d657bf911874bcc44fdc8df97f82ec))
+
 # [2.2.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.1.0...v2.2.0) (2022-02-11)
 
 
