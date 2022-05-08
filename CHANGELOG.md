@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.3.0...v2.4.0) (2022-05-08)
+
+
+### Features
+
+* update dependencies ([f8ea54c](https://github.com/allenevans/github-self-hosted-runner/commit/f8ea54c5d37d8d831ab646a992de526c30e378a3))
+
 # [2.3.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.2.2...v2.3.0) (2022-04-24)
 
 
