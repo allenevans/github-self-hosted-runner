@@ -1,10 +1,10 @@
 FROM debian:bullseye
 
 # https://github.com/docker/compose/releases
-ARG DOCKER_COMPOSE_VERSION=2.4.1
+ARG DOCKER_COMPOSE_VERSION=2.5.0
 
 # https://github.com/actions/runner/releases
-ARG GITHUB_RUNNER_VERSION=2.290.1
+ARG GITHUB_RUNNER_VERSION=2.291.1
 
 # https://github.com/docker/machine/releases
 ARG DOCKER_MACHINE_VERSION=0.16.2
