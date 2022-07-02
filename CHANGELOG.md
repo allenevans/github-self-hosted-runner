@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.5.0...v2.6.0) (2022-07-02)
+
+
+### Features
+
+* update runner dependencies ([0ffbd64](https://github.com/allenevans/github-self-hosted-runner/commit/0ffbd6449b9fddc5a8a613d9bb38af6561abd08c))
+
 # [2.5.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.4.0...v2.5.0) (2022-06-04)
 
 
