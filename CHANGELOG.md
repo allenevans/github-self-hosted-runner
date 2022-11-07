@@ -1,3 +1,11 @@
+# [2.9.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.8.0...v2.9.0) (2022-11-07)
+
+
+### Features
+
+* update dependencies ([9360a64](https://github.com/allenevans/github-self-hosted-runner/commit/9360a64440484cdce4fbdb2a0d463564ba4f0e1c))
+* update npm dependencies ([9857e2e](https://github.com/allenevans/github-self-hosted-runner/commit/9857e2e021de5a2c8ac68df45c1a899b7b2faae5))
+
 # [2.8.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.7.0...v2.8.0) (2022-10-07)
 
 
