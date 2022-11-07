@@ -1,16 +1,16 @@
 FROM debian:bullseye
 
 # https://github.com/docker/compose/releases
-ARG DOCKER_COMPOSE_VERSION=2.11.2
+ARG DOCKER_COMPOSE_VERSION=2.12.2
 
 # https://github.com/actions/runner/releases
-ARG GITHUB_RUNNER_VERSION=2.298.2
+ARG GITHUB_RUNNER_VERSION=2.299.1
 
 # https://github.com/docker/machine/releases
 ARG DOCKER_MACHINE_VERSION=0.16.2
 
 # https://www.terraform.io/downloads.html
-ARG TERRAFORM_VERSION=1.3.2
+ARG TERRAFORM_VERSION=1.3.4
 
 ENV GITHUB_URL=""
 ENV RUNNER_NAME=""
