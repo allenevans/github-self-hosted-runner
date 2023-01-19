@@ -13,7 +13,16 @@ jobs:
         node-version: [18.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3 # https://github.com/actions/checkout/tags
+        with:
+          fetch-depth: 0
+          ref: master
+          clean: true
+
+      - name: Node.js
+        uses: actions/setup-node@v3.6.0 # https://github.com/actions/setup-node/tags
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: Config
         run: |
