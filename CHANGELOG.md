@@ -1,3 +1,10 @@
+# [2.12.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.11.0...v2.12.0) (2023-06-17)
+
+
+### Features
+
+* add necessary libraries to enable installing playwright browsers ([05ac84f](https://github.com/allenevans/github-self-hosted-runner/commit/05ac84fe5105422fbb21ad3284f6f479a049a33d))
+
 # [2.11.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.10.0...v2.11.0) (2023-05-17)
 
 
