@@ -1,3 +1,10 @@
+# [2.13.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.12.0...v2.13.0) (2023-08-15)
+
+
+### Features
+
+* update dependencies ([be68f67](https://github.com/allenevans/github-self-hosted-runner/commit/be68f67f4635dc859e4e637cdfe28f0f5a3c6f83))
+
 # [2.12.0](https://github.com/allenevans/github-self-hosted-runner/compare/v2.11.0...v2.12.0) (2023-06-17)
 
 
